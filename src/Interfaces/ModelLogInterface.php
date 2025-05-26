@@ -6,9 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 interface ModelLogInterface
 {
-    public function __construct(Model $old_model, Model $new_model);
-
-    public function toArray(Model $model);
+    public function __construct(Model $model, array $original, array $dirty);
 
     public function makeMessage();
 

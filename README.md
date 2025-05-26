@@ -34,50 +34,16 @@ php artisan migrate
 ## Usage
 
 You should crete model log service, and it extends ModelLogService. It contains toArray() method.
+
 ```php
 namespace App\Services\ModelLog;
 
 use Dostontiu\ModelLog\Services\ModelLogService;
+use Dostontiu\ModelLog\Traits\UpdateLoggable;
 
-class UserLog extends ModelLogService
+class User extends Modal
 {
-    public function toArray($model)
-    {
-        return [
-            'role_id' => $model->role_id,
-            'role_name' => $model->role->name ?? '',
-            'organization_id' => $model->organization_id,
-            'organization_name' => $model->organization->name ?? "",
-            'full_name' => $model->full_name,
-            'is_active' => $model->is_active ? 'Active' : 'Not active',
-        ];
-    }
-}
-```
-
-Your controller should be this.
-
-```php
-namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
-use App\Services\ModelLog\UserLog;
-
-class UserController extends ModelLogService
-{
-    public function update(Request $request, $id)
-    {
-        $old_model = $model = User::find($id);
-        
-        $model->update([
-            'role_id' => $request->role_id,
-            'full_name' => $request->full_name,
-        ]);    
-      
-        new UserLog($old_model, $model);
-        
-        return redirect()->back()->withSuccess("Updated successfully!");
-    }
+    use UpdateLoggable; // Add this trait for necessary model
 }
 ```
 

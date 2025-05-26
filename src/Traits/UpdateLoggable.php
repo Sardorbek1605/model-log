@@ -4,7 +4,7 @@ namespace Dostontiu\ModelLog\Traits;
 
 use Dostontiu\ModelLog\Services\ModelLogService;
 
-trait ModelUpdateLoggable
+trait UpdateLoggable
 {
     public static function bootModelUpdateLoggable(): void
     {
