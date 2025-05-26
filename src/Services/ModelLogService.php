@@ -28,14 +28,12 @@ class ModelLogService implements ModelLogInterface
     public function makeMessage()
     {
         $message = "Change ";
-        $array_keys = array_keys($this->before);
+        $array_keys = array_keys($this->after);
         $change_item = 0;
         foreach ($array_keys as $key) {
-            if ($this->before[$key] != $this->after[$key]) {
-                $comma = $change_item > 0 ? ', ' : '';
-                $message .= $comma.$key.' => from '.$this->before[$key].' to '.$this->after[$key];
-                $change_item++;
-            }
+            $comma = $change_item > 0 ? ', ' : '';
+            $message .= $comma.$key.' => from '.$this->before[$key].' to '.$this->after[$key];
+            $change_item++;
         }
         return $message . " changed";
     }
