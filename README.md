@@ -33,7 +33,7 @@ php artisan migrate
 ```
 ## Usage
 
-You should crete model log service, and it extends ModelLogService. It contains toArray() method.
+You should add UpdateLoggable trait for necessary model 
 
 ```php
 namespace App\Services\ModelLog;
@@ -43,7 +43,7 @@ use Dostontiu\ModelLog\Traits\UpdateLoggable;
 
 class User extends Modal
 {
-    use UpdateLoggable; // Add this trait for necessary model
+    use UpdateLoggable;
 }
 ```
 
