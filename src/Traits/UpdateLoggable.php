@@ -6,7 +6,7 @@ use Sardorbek\ModelLog\Services\ModelLogService;
 
 trait UpdateLoggable
 {
-    public static function bootModelUpdateLoggable(): void
+    public static function bootUpdateLoggable(): void
     {
         static::updating(function ($model) {
             $dirty = $model->getDirty();

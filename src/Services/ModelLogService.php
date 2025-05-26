@@ -31,9 +31,11 @@ class ModelLogService implements ModelLogInterface
         $array_keys = array_keys($this->before);
         $change_item = 0;
         foreach ($array_keys as $key) {
-            $comma = $change_item > 0 ? ', ' : '';
-            $message .= $comma . $key . ' => from ' . $this->before[$key] . ' to ' . $this->after[$key];
-            $change_item++;
+            if ($this->before[$key] != $this->after[$key]) {
+                $comma = $change_item > 0 ? ', ' : '';
+                $message .= $comma.$key.' => from '.$this->before[$key].' to '.$this->after[$key];
+                $change_item++;
+            }
         }
         return $message . " changed";
     }
