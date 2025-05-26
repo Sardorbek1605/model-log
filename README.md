@@ -10,7 +10,7 @@ You should add repository to your composer.json file
 "repositories": [
     {
         "type": "vcs",
-        "url": "https://github.com/dostontiu/model-log"
+        "url": "https://github.com/Sardorbek1605/model-log"
     }
 ]
 ```
@@ -18,14 +18,14 @@ You should add repository to your composer.json file
 You can install the package via composer:
 
 ```bash
-composer require dostontiu/model-log
+composer require Sardorbek1605/model-log
 ```
 
 ## Configuration
 
 1. You should publish migration files
 ```bash
-php artisan vendor:publish --provider="Dostontiu\ModelLog\ModelLogServiceProvider"
+php artisan vendor:publish --provider="Sardorbek\ModelLog\ModelLogServiceProvider"
 ```
 2. Run migration
 ```bash
@@ -38,8 +38,8 @@ You should add UpdateLoggable trait for necessary model
 ```php
 namespace App\Services\ModelLog;
 
-use Dostontiu\ModelLog\Services\ModelLogService;
-use Dostontiu\ModelLog\Traits\UpdateLoggable;
+use Sardorbek\ModelLog\Services\ModelLogService;
+use Sardorbek\ModelLog\Traits\UpdateLoggable;
 
 class User extends Modal
 {
