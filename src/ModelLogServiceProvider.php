@@ -1,6 +1,6 @@
 <?php
 
-namespace Dostontiu\ModelLog;
+namespace Sardorbek\ModelLog;
 
 use Illuminate\Filesystem\Filesystem;
 use Illuminate\Support\Collection;

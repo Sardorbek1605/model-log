@@ -1,6 +1,8 @@
 {
-    "name": "dostontiu/model-log",
+    "name": "Sardorbek1605/model-log",
     "description": "Create history log for laravel model",
+    "type": "library",
+    "license": "MIT",
     "keywords": [
         "model-logs",
         "laravel-model-logs",
@@ -8,26 +10,26 @@
     ],
     "autoload": {
         "psr-4": {
-            "Dostontiu\\ModelLog\\": "src"
+            "Sardorbek\\ModelLog\\": "src"
         }
     },
     "authors": [
         {
-            "name": "Doston Ismailov",
-            "email": "dostonberuniy@gmail.com",
-            "role": "Developer"
+            "name": "Abduqodirov Sardor",
+            "email": "abduqodirov.sardor1605@gmail.com",
+            "role": "Project Creator"
         }
     ],
     "require": {
-        "php": "^8.0",
-        "illuminate/auth": "^6|^7|^8.67|^9|^10",
-        "illuminate/contracts": "^6|^7|^8.67|^9|^10",
-        "illuminate/support": "^6|^7|^8.67|^9|^10"
+        "php": ">=8.0",
+        "illuminate/auth": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/contracts": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0",
+        "illuminate/support": "^6.0|^7.0|^8.0|^9.0|^10.0|^11.0|^12.0"
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Dostontiu\\ModelLog\\ModelLogServiceProvider"
+                "Sardorbek\\ModelLog\\ModelLogServiceProvider"
             ]
         }
     }

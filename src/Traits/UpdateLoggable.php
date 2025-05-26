@@ -1,8 +1,8 @@
 <?php
 
-namespace Dostontiu\ModelLog\Traits;
+namespace Sardorbek\ModelLog\Traits;
 
-use Dostontiu\ModelLog\Services\ModelLogService;
+use Sardorbek\ModelLog\Services\ModelLogService;
 
 trait UpdateLoggable
 {

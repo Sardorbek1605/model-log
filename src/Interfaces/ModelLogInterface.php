@@ -1,6 +1,6 @@
 <?php
 
-namespace Dostontiu\ModelLog\Interfaces;
+namespace Sardorbek\ModelLog\Interfaces;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace Dostontiu\ModelLog\Services;
+namespace Sardorbek\ModelLog\Services;
 
-use Dostontiu\ModelLog\Interfaces\ModelLogInterface;
-use Dostontiu\ModelLog\Models\ModelLog;
+use Sardorbek\ModelLog\Interfaces\ModelLogInterface;
+use Sardorbek\ModelLog\Models\ModelLog;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
